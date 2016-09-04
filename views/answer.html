@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="node">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+.question_box{
+  //border: 1px solid black;
+  padding: 10px;
+  margin:10px;
+  box-shadow: 1px 1px 1px 2px rgba(10,10,10,0.15);
+}
+.num{
+  width: 50%;
+}
+</style>
+<link href="stylesheets/style.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="javascripts/answer.js"></script>
+<body ng-controller="answer" style="background-image: url('http://www.template-joomspirit.com/template-joomla/template-101/images/background/light-blue-NR.jpg'); background-size : cover;">
+  <h1 style="font-family:Cambria;">Discussion Forum</h1>
+  <button class="btn btn-default  pull-right" ><a href="discussion">back</a></button>
+  <div class="form-group col-md-6">
+  <label for="pwd" style="color:black; font-size: 1.2em;">Your Answer :</label>
+  <textarea class="form-control" ng-model="answer"></textarea>
+  <br>
+  <button ng-click="post()" class="btn btn-success pull-right">POST</button>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <p style="font-family:Cambria; font-size:1.6em; font-weight:bold;">Answers: </p>
+  <br>
+    <br>
+  <div  ng-repeat=" x in answers | filter : search_text" class="question_box">
+    <p style="font-weight:bold; font-family:Cambria; font-size: 1.4em;">  {{x.answer}} </p>
+    <p style="font-style:italic">  Posted By :{{x.username}} </p>
+  </div>
+</div>
+</body>
+</html>

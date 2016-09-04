@@ -1,5 +1,5 @@
 # codeNcounter-hackathon
-                     WAY To Connect
+                     ##WAY To Connect
 Database used is PostGresql and the database name is 'happiness'
 It contains 6 tables users, student, alumni, discussion, favourites and answer
 
